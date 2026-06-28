@@ -1,0 +1,46 @@
+Read1 before filtering:
+total reads: 1000000
+total bases: 150000000
+Q20 bases: 145873379(97.2489%)
+Q30 bases: 141685882(94.4573%)
+Q40 bases: 138995920(92.6639%)
+
+Read2 before filtering:
+total reads: 1000000
+total bases: 150000000
+Q20 bases: 146049005(97.366%)
+Q30 bases: 141037895(94.0253%)
+Q40 bases: 138199436(92.133%)
+
+Read1 after filtering:
+total reads: 993763
+total bases: 131634225
+Q20 bases: 128776706(97.8292%)
+Q30 bases: 125429962(95.2867%)
+Q40 bases: 123357695(93.7125%)
+
+Read2 after filtering:
+total reads: 993763
+total bases: 131634255
+Q20 bases: 128698677(97.7699%)
+Q30 bases: 124968513(94.9362%)
+Q40 bases: 122598862(93.136%)
+
+Filtering result:
+reads passed filter: 1987526
+reads failed due to low quality: 5388
+reads failed due to too many N: 7086
+reads failed due to too short: 0
+reads failed due to adapter dimer: 0
+reads with adapter trimmed: 996086
+bases trimmed due to adapters: 34893852
+
+Duplication rate: 9.4115%
+
+Insert size peak (evaluated by paired-end reads): 131
+
+JSON report: reports/fastp/NB001.json
+HTML report: reports/fastp/NB001.html
+
+fastp --thread 4 --in1 examples/NB001/input/NB001_R1.fastq.gz --in2 examples/NB001/input/NB001_R2.fastq.gz --out1 results/trimmed/NB001_R1.clean.fastq.gz --out2 results/trimmed/NB001_R2.clean.fastq.gz --html reports/fastp/NB001.html --json reports/fastp/NB001.json 
+fastp v1.3.5, time used: 5 seconds

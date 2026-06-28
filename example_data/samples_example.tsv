@@ -1,0 +1,2 @@
+sample_id	fq1	fq2
+NB001	results/trimmed/NB001_R1.clean.fastq.gz	results/trimmed/NB001_R2.clean.fastq.gz

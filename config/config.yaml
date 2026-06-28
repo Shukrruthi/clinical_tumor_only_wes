@@ -1,0 +1,105 @@
+###############################################################################
+# BSEQCURE THERAPEUTICS
+# Clinical Neuroblastoma Tumor-Only WES Pipeline
+#
+# Master configuration file
+###############################################################################
+
+###############################################################################
+# Reference Genome
+###############################################################################
+
+reference:
+
+  genome: "GRCh38"
+
+  fasta: "resources/reference/Homo_sapiens_assembly38.fasta"
+
+  fai: "resources/reference/Homo_sapiens_assembly38.fasta.fai"
+
+  dict: "resources/reference/Homo_sapiens_assembly38.dict"
+
+###############################################################################
+# Java Virtual Machine (JVM) Options
+###############################################################################
+java:
+  xmx: "8G"
+
+###############################################################################
+# Known Variant Resources
+###############################################################################
+
+known_sites:
+
+  dbsnp: "resources/reference/Homo_sapiens_assembly38.dbsnp138.vcf.gz"
+
+  mills: "resources/reference/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+
+###############################################################################
+# Capture Design
+###############################################################################
+
+capture:
+
+  design: "Agilent SureSelectXT Human All Exon V8"
+
+  bed: "resources/targets/S33266436_Regions.bed"
+
+  padded_intervals: "resources/targets/S33266436_Padded.interval_list"
+
+###############################################################################
+# Annotation
+###############################################################################
+
+annotation:
+
+  cache: "resources/annotation/vep_cache"
+
+  assembly: "GRCh38"
+
+
+###############################################################################
+# Threads
+###############################################################################
+
+threads:
+
+  fastqc: 2
+
+  fastp: 4
+
+  bwa: 8
+
+  samtools: 4
+
+  gatk: 8
+
+  vep: 4
+
+  cnvkit: 4
+
+  msisensor2: 4
+
+###############################################################################
+# GATK Specific Settings
+###############################################################################
+gatk:
+  tmpdir: "tmp"
+
+###############################################################################
+# MUTECT2
+mutect2:
+
+  pon: "resources/reference/1000g_pon.hg38.vcf.gz"
+
+  germline_resource: "resources/reference/af-only-gnomad.hg38.vcf.gz"
+
+  intervals: "resources/targets/S33266436_Regions.interval_list"
+
+###############################################################################
+# Output
+###############################################################################
+
+output:
+
+  directory: "results"

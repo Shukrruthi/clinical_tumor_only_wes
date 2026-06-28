@@ -1,0 +1,10 @@
+name: clinical_wes_vep
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - ensembl-vep=116
+  - tabix

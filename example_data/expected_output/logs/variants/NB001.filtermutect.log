@@ -1,0 +1,54 @@
+Using GATK jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar FilterMutectCalls -R resources/reference/Homo_sapiens_assembly38.fasta -V results/variants/NB001.unfiltered.vcf.gz --contamination-table results/variants/NB001.contamination.table --ob-priors results/variants/NB001.read-orientation-model.tar.gz -O results/variants/NB001.filtered.vcf.gz
+16:20:24.004 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+16:20:24.139 INFO  FilterMutectCalls - ------------------------------------------------------------
+16:20:24.143 INFO  FilterMutectCalls - The Genome Analysis Toolkit (GATK) v4.6.2.0
+16:20:24.145 INFO  FilterMutectCalls - For support and documentation go to https://software.broadinstitute.org/gatk/
+16:20:24.146 INFO  FilterMutectCalls - Executing as root@Shukrruthi on Linux v6.18.33.2-microsoft-standard-WSL2 amd64
+16:20:24.148 INFO  FilterMutectCalls - Java runtime: OpenJDK 64-Bit Server VM v17.0.18-internal+0-adhoc.conda.src
+16:20:24.149 INFO  FilterMutectCalls - Start Date/Time: June 28, 2026 at 4:20:23 PM IST
+16:20:24.151 INFO  FilterMutectCalls - ------------------------------------------------------------
+16:20:24.152 INFO  FilterMutectCalls - ------------------------------------------------------------
+16:20:24.155 INFO  FilterMutectCalls - HTSJDK Version: 4.2.0
+16:20:24.156 INFO  FilterMutectCalls - Picard Version: 3.4.0
+16:20:24.157 INFO  FilterMutectCalls - Built for Spark Version: 3.5.0
+16:20:24.161 INFO  FilterMutectCalls - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+16:20:24.162 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+16:20:24.163 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+16:20:24.165 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+16:20:24.166 INFO  FilterMutectCalls - Deflater: IntelDeflater
+16:20:24.167 INFO  FilterMutectCalls - Inflater: IntelInflater
+16:20:24.168 INFO  FilterMutectCalls - GCS max retries/reopens: 20
+16:20:24.169 INFO  FilterMutectCalls - Requester pays: disabled
+16:20:24.171 INFO  FilterMutectCalls - Initializing engine
+16:20:24.609 INFO  FeatureManager - Using codec VCFCodec to read file file:///mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/results/variants/NB001.unfiltered.vcf.gz
+16:20:24.803 INFO  FilterMutectCalls - Done initializing engine
+16:20:24.946 INFO  IOUtils - Extracting data from archive: file:///mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/results/variants/NB001.read-orientation-model.tar.gz
+16:20:24.968 INFO  IOUtils - Extracting file: ./NB001.orientation_priors
+16:20:25.021 INFO  ProgressMeter - Starting traversal
+16:20:25.024 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+16:20:25.026 INFO  FilterMutectCalls - Starting pass 0 through the variants
+16:20:35.615 INFO  ProgressMeter -       chr5:141863616              0.2                  7000          39663.8
+16:20:45.650 INFO  ProgressMeter -       chr14:74799230              0.3                 16000          46545.5
+16:20:52.711 INFO  FilterMutectCalls - Finished pass 0 through the variants
+16:20:59.318 INFO  FilterMutectCalls - Starting pass 1 through the variants
+16:20:59.488 INFO  ProgressMeter -        chr1:10629856              0.6                 24000          41783.9
+16:21:09.637 INFO  ProgressMeter -       chr6:116628263              0.7                 32000          43037.7
+16:21:19.705 INFO  ProgressMeter -        chr16:3483549              0.9                 41000          44989.0
+16:21:24.542 INFO  FilterMutectCalls - Finished pass 1 through the variants
+16:21:25.176 INFO  FilterMutectCalls - Starting pass 2 through the variants
+16:21:31.003 INFO  ProgressMeter -       chr3:179240047              1.1                 53000          48197.9
+16:21:41.152 INFO  ProgressMeter -      chr14:102017151              1.3                 64000          50442.0
+16:21:44.511 INFO  FilterMutectCalls - Finished pass 2 through the variants
+16:21:44.523 INFO  FilterMutectCalls - Starting pass 3 through the variants
+16:21:51.592 INFO  ProgressMeter -       chr8:123651927              1.4                 82000          56834.6
+16:22:02.031 INFO  FilterMutectCalls - Finished pass 3 through the variants
+16:22:02.041 INFO  FilterMutectCalls - No variants filtered by: AllowAllVariantsVariantFilter
+16:22:02.042 INFO  FilterMutectCalls - 0 read(s) filtered by: AllowAllReadsReadFilter 
+
+16:22:02.043 INFO  ProgressMeter -        chrX:84336836              1.6                 95660          59160.2
+16:22:02.044 INFO  ProgressMeter - Traversal complete. Processed 95660 total variants in 1.6 minutes.
+16:22:03.149 INFO  FilterMutectCalls - Shutting down engine
+[June 28, 2026 at 4:22:03 PM IST] org.broadinstitute.hellbender.tools.walkers.mutect.filtering.FilterMutectCalls done. Elapsed time: 1.65 minutes.
+Runtime.totalMemory()=195035136

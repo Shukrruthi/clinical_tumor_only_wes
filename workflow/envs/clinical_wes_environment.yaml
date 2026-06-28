@@ -1,0 +1,44 @@
+name: cinical_wes_environment
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+
+  - python=3.11
+
+  - snakemake=9.6
+
+  - fastqc
+
+  - multiqc
+
+  - fastp
+
+  - bwa
+
+  - samtools=1.22
+
+  - picard
+
+  - bedtools
+
+  - openjdk=17
+
+  - gatk4=4.6.2.0
+
+  - bcftools=1.23.1
+
+  - vcftools
+
+  - pigz
+
+  - pandas
+
+  - numpy
+
+  - matplotlib
+
+  - pyyaml

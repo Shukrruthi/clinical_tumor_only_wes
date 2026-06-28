@@ -1,0 +1,34 @@
+Using GATK jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar ApplyBQSR -R resources/reference/Homo_sapiens_assembly38.fasta -I results/dedup/NB001.marked.bam --bqsr-recal-file results/bqsr/NB001.recal.table --allow-missing-read-group true -O results/bqsr/NB001.recal.bam
+16:14:08.027 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+16:14:08.140 INFO  ApplyBQSR - ------------------------------------------------------------
+16:14:08.143 INFO  ApplyBQSR - The Genome Analysis Toolkit (GATK) v4.6.2.0
+16:14:08.145 INFO  ApplyBQSR - For support and documentation go to https://software.broadinstitute.org/gatk/
+16:14:08.146 INFO  ApplyBQSR - Executing as root@Shukrruthi on Linux v6.18.33.2-microsoft-standard-WSL2 amd64
+16:14:08.147 INFO  ApplyBQSR - Java runtime: OpenJDK 64-Bit Server VM v17.0.18-internal+0-adhoc.conda.src
+16:14:08.149 INFO  ApplyBQSR - Start Date/Time: June 28, 2026 at 4:14:07 PM IST
+16:14:08.150 INFO  ApplyBQSR - ------------------------------------------------------------
+16:14:08.151 INFO  ApplyBQSR - ------------------------------------------------------------
+16:14:08.153 INFO  ApplyBQSR - HTSJDK Version: 4.2.0
+16:14:08.155 INFO  ApplyBQSR - Picard Version: 3.4.0
+16:14:08.156 INFO  ApplyBQSR - Built for Spark Version: 3.5.0
+16:14:08.159 INFO  ApplyBQSR - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+16:14:08.160 INFO  ApplyBQSR - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+16:14:08.162 INFO  ApplyBQSR - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+16:14:08.163 INFO  ApplyBQSR - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+16:14:08.164 INFO  ApplyBQSR - Deflater: IntelDeflater
+16:14:08.166 INFO  ApplyBQSR - Inflater: IntelInflater
+16:14:08.167 INFO  ApplyBQSR - GCS max retries/reopens: 20
+16:14:08.169 INFO  ApplyBQSR - Requester pays: disabled
+16:14:08.170 INFO  ApplyBQSR - Initializing engine
+16:14:08.647 INFO  ApplyBQSR - Done initializing engine
+16:14:08.697 INFO  ProgressMeter - Starting traversal
+16:14:08.698 INFO  ProgressMeter -        Current Locus  Elapsed Minutes       Reads Processed     Reads/Minute
+16:14:12.793 INFO  ApplyBQSR - 0 read(s) filtered by: WellformedReadFilter 
+
+16:14:12.794 INFO  ProgressMeter - chrUn_JTFH01000013v1_decoy:3615              0.1                222213        3255868.1
+16:14:12.795 INFO  ProgressMeter - Traversal complete. Processed 222213 total reads in 0.1 minutes.
+16:14:13.023 INFO  ApplyBQSR - Shutting down engine
+[June 28, 2026 at 4:14:13 PM IST] org.broadinstitute.hellbender.tools.walkers.bqsr.ApplyBQSR done. Elapsed time: 0.08 minutes.
+Runtime.totalMemory()=240123904

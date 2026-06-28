@@ -1,0 +1,61 @@
+Using GATK jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar BaseRecalibrator -R resources/reference/Homo_sapiens_assembly38.fasta -I results/dedup/NB001.marked.bam --known-sites resources/reference/Homo_sapiens_assembly38.dbsnp138.vcf.gz --known-sites resources/reference/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz -O results/bqsr/NB001.recal.table
+16:11:37.418 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/shukrruthi/anaconda3/envs/cinical_wes_environment/share/gatk4-4.6.2.0-0/gatk-package-4.6.2.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+16:11:37.559 INFO  BaseRecalibrator - ------------------------------------------------------------
+16:11:37.563 INFO  BaseRecalibrator - The Genome Analysis Toolkit (GATK) v4.6.2.0
+16:11:37.564 INFO  BaseRecalibrator - For support and documentation go to https://software.broadinstitute.org/gatk/
+16:11:37.565 INFO  BaseRecalibrator - Executing as root@Shukrruthi on Linux v6.18.33.2-microsoft-standard-WSL2 amd64
+16:11:37.567 INFO  BaseRecalibrator - Java runtime: OpenJDK 64-Bit Server VM v17.0.18-internal+0-adhoc.conda.src
+16:11:37.568 INFO  BaseRecalibrator - Start Date/Time: June 28, 2026 at 4:11:37 PM IST
+16:11:37.570 INFO  BaseRecalibrator - ------------------------------------------------------------
+16:11:37.571 INFO  BaseRecalibrator - ------------------------------------------------------------
+16:11:37.572 INFO  BaseRecalibrator - HTSJDK Version: 4.2.0
+16:11:37.574 INFO  BaseRecalibrator - Picard Version: 3.4.0
+16:11:37.575 INFO  BaseRecalibrator - Built for Spark Version: 3.5.0
+16:11:37.578 INFO  BaseRecalibrator - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+16:11:37.580 INFO  BaseRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+16:11:37.581 INFO  BaseRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+16:11:37.582 INFO  BaseRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+16:11:37.583 INFO  BaseRecalibrator - Deflater: IntelDeflater
+16:11:37.584 INFO  BaseRecalibrator - Inflater: IntelInflater
+16:11:37.585 INFO  BaseRecalibrator - GCS max retries/reopens: 20
+16:11:37.586 INFO  BaseRecalibrator - Requester pays: disabled
+16:11:37.587 INFO  BaseRecalibrator - Initializing engine
+16:11:38.339 INFO  FeatureManager - Using codec VCFCodec to read file file:///mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/resources/reference/Homo_sapiens_assembly38.dbsnp138.vcf.gz
+16:11:38.671 INFO  FeatureManager - Using codec VCFCodec to read file file:///mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/resources/reference/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
+16:11:38.864 INFO  BaseRecalibrator - Done initializing engine
+16:11:38.871 INFO  BaseRecalibrationEngine - The covariates being used here: 
+16:11:38.872 INFO  BaseRecalibrationEngine - 	ReadGroupCovariate
+16:11:38.873 INFO  BaseRecalibrationEngine - 	QualityScoreCovariate
+16:11:38.875 INFO  BaseRecalibrationEngine - 	ContextCovariate
+16:11:38.875 INFO  BaseRecalibrationEngine - 	CycleCovariate
+16:11:38.987 INFO  ProgressMeter - Starting traversal
+16:11:38.989 INFO  ProgressMeter -        Current Locus  Elapsed Minutes       Reads Processed     Reads/Minute
+16:11:49.184 INFO  ProgressMeter -        chr2:71611205              0.2                 24000         141315.0
+16:11:59.608 INFO  ProgressMeter -       chr3:139374479              0.3                 43000         125145.5
+16:12:09.660 INFO  ProgressMeter -        chr5:84827454              0.5                 59000         115422.2
+16:12:19.816 INFO  ProgressMeter -       chr7:102438975              0.7                 80000         117572.1
+16:12:30.133 INFO  ProgressMeter -       chr10:80665535              0.9                104000         122010.8
+16:12:41.418 INFO  ProgressMeter -      chr13:107115579              1.0                133000         127829.3
+16:12:51.669 INFO  ProgressMeter -       chr18:23213934              1.2                167000         137866.5
+16:13:02.296 INFO  ProgressMeter -       chrX:101130033              1.4                195000         140446.1
+16:13:04.420 INFO  BaseRecalibrator - 21611 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+72 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+21683 total reads filtered out of 222213 reads processed
+16:13:04.421 INFO  ProgressMeter - chrUn_KI270438v1:112094              1.4                200530         140838.1
+16:13:04.421 INFO  ProgressMeter - Traversal complete. Processed 200530 total reads in 1.4 minutes.
+16:13:04.425 INFO  BaseRecalibrator - Calculating quantized quality scores...
+16:13:04.436 INFO  BaseRecalibrator - Writing recalibration report...
+16:14:06.240 INFO  BaseRecalibrator - ...done!
+16:14:06.242 INFO  BaseRecalibrator - BaseRecalibrator was able to recalibrate 200530 reads
+16:14:06.243 INFO  BaseRecalibrator - Shutting down engine
+[June 28, 2026 at 4:14:06 PM IST] org.broadinstitute.hellbender.tools.walkers.bqsr.BaseRecalibrator done. Elapsed time: 2.48 minutes.
+Runtime.totalMemory()=287309824
+Tool returned:
+SUCCESS

@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	NB001	/mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/reports/fastp/NB001.json
+FastQC	all_sections	NB001_R1	/mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/reports/raw_fastqc/NB001_R1_fastqc.zip
+FastQC	all_sections	NB001_R2	/mnt/c/Users/shukr/projects/clinical-neuroblastoma-wes/reports/raw_fastqc/NB001_R2_fastqc.zip
