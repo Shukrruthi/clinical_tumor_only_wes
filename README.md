@@ -137,8 +137,7 @@ A Linux environment (native or WSL) with Conda is required.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/bseqcure/clinical_wes.git
-cd clinical_wes
+git clone [https://github.com/bseqcure/clinical_wes.git](https://github.com/Shukrruthi/clinical_tumor_only_wes/
 ```
 
 ## 2. Create Conda environments
