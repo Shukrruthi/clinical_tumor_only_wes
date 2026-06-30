@@ -41,11 +41,9 @@ known_sites:
 
 capture:
 
-  design: "Agilent SureSelectXT Human All Exon V8"
+  design: "Example: Agilent SureSelectXT Human All Exon V8"
 
-  bed: "resources/targets/S33266436_Regions.bed"
-
-  padded_intervals: "resources/targets/S33266436_Padded.interval_list"
+  bed: "resources/targets/[Use relevant company capture .bed file]"
 
 ###############################################################################
 # Annotation
@@ -64,7 +62,7 @@ annotation:
 
 threads:
 
-  fastqc: 2
+  fastqc: 4
 
   fastp: 4
 
