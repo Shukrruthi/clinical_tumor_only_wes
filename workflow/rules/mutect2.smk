@@ -34,6 +34,7 @@ rule mutect2:
             --germline-resource {input.germline} \
             --panel-of-normals {input.pon} \
             --f1r2-tar-gz {output.f1r2} \
+            --native-pair-hmm-threads {threads} \
             -O {output.vcf} \
             > {log} 2>&1
         """
