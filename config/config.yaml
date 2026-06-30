@@ -43,7 +43,7 @@ capture:
 
   design: "Validated capture design: Agilent SureSelectXT Human All Exon V8"
 
-  bed: "resources/targets/[Use relevant company capture .bed file]"
+  bed: "resources/targets/company_capture.bed"
 
 ###############################################################################
 # Annotation
