@@ -41,7 +41,7 @@ known_sites:
 
 capture:
 
-  design: "Example: Agilent SureSelectXT Human All Exon V8"
+  design: "Validated capture design: Agilent SureSelectXT Human All Exon V8"
 
   bed: "resources/targets/[Use relevant company capture .bed file]"
 
