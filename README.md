@@ -51,7 +51,7 @@ Full rationale for this scope boundary and the analytical limitations that apply
 # Repository Structure
 
 ```text
-clinical_wes/
+clinical_tumor_only_wes/
 ├── Snakefile
 ├── preprocessing.sh
 ├── config/
@@ -172,8 +172,8 @@ Download and install the Ensembl VEP GRCh38 offline cache (version 116) into `re
 # Preparing Raw FASTQ Files
 
 ```bash
-cp /data/NB001_R1.fastq.gz raw_input/
-cp /data/NB001_R2.fastq.gz raw_input/
+cp /data/[sample]_R1.fastq.gz raw_input/
+cp /data/[sample]_R2.fastq.gz raw_input/
 ```
 
 The current implementation of `preprocessing.sh` processes one sample per run. The sample name is derived automatically from the R1 filename. Do not place more than one paired sample in `raw_input/` when running preprocessing.
