@@ -1,7 +1,8 @@
 rule annotate_variants:
     input:
         vcf="results/variants/{sample}.normalized.vcf.gz",
-        tbi="results/variants/{sample}.normalized.vcf.gz.tbi"
+        tbi="results/variants/{sample}.normalized.vcf.gz.tbi",
+        reference=config["reference"]["fasta"]
 
     output:
         vcf="results/annotation/{sample}.vep.vcf.gz",
@@ -27,8 +28,10 @@ rule annotate_variants:
             --dir_cache resources/annotation/vep_cache \
             --species homo_sapiens \
             --assembly GRCh38 \
+            --fasta {input.reference} \
             --fork {threads} \
             --vcf \
+            --everything \
             --compress_output bgzip \
             --force_overwrite \
             --input_file {input.vcf} \
