@@ -12,7 +12,11 @@ rule annotate_variants:
         "logs/annotation/{sample}.vep.log"
 
     threads: 8
-
+    
+    params:
+        cache=config["annotation"]["cache"],
+        assembly=config["annotation"]["assembly"]
+    
     shell:
         r"""
         set -euo pipefail
@@ -25,9 +29,9 @@ rule annotate_variants:
         vep \
             --cache \
             --offline \
-            --dir_cache resources/annotation/vep_cache \
+            --dir_cache {params.cache} \
             --species homo_sapiens \
-            --assembly GRCh38 \
+            --assembly {params.assembly} \
             --fasta {input.reference} \
             --fork {threads} \
             --vcf \
